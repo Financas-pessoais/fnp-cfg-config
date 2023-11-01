@@ -23,6 +23,7 @@ eureka:
     defaultZone: https://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka
   instance:
     prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 # CONFIGURAÇÕES ACTUATOR
 management:
