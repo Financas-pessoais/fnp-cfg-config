@@ -6,7 +6,7 @@ eureka:
     fetchRegistry: false
     healthcheck: enabled
     serviceUrl:
-    defaultZone: http://${DISCOVERY_SERVICE_IP}:8761/eureka/
+    defaultZone: https://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka/
   instance:
-    hostname: ${DISCOVERY_SERVICE_IP:127.0.0.1}
+    hostname: https://fnp-svc-discovery-server-8c7614af535c.herokuapp.com
 
