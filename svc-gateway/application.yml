@@ -18,9 +18,9 @@ eureka:
   client:
     fetch-register: true
     register-with-eureka: true
-    defaultZone: ${EUREKA_URL}
+    defaultZone: ${EUREKA_URL:https://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/}
   serviceUrl:
-    defaultZone: ${EUREKA_URL}
+    defaultZone: ${EUREKA_URL:https://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/}
   instance:
     prefer-ip-address: true
 
