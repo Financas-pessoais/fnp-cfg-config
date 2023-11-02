@@ -5,6 +5,8 @@ spring:
       password: ${EUREKA_PASSWORD}
 server:
   port: 8761
+
+# CONFIGURAÇÕES EUREKA
 eureka:
   client:
     fetch-registry: false
@@ -16,3 +18,15 @@ eureka:
       defaultZone: ${EUREKA_PROTOCOL}://${EUREKA_URL}/eureka/
   instance:
     hostname: ${EUREKA_URL}
+
+# CONFIGURAÇÕES ACTUATOR
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
+  endpoint:
+    gateway:
+      enabled:
+        true
