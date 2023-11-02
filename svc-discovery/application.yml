@@ -1,12 +1,18 @@
+spring:
+  security:
+    user:
+      name: ${EUREKA_USERNAME}
+      password: ${EUREKA_PASSWORD}
 server:
   port: 8761
 eureka:
   client:
+    fetch-registry: false
+    register-with-eureka: false
     registerWithEureka: false
     fetchRegistry: false
     healthcheck: enabled
     serviceUrl:
-    defaultZone: https://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka/
+      defaultZone: ${EUREKA_PROTOCOL}://${EUREKA_URL}/eureka/
   instance:
-    hostname: https://fnp-svc-discovery-server-8c7614af535c.herokuapp.com
-
+    hostname: ${EUREKA_URL}
