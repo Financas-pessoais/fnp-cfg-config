@@ -30,3 +30,5 @@ management:
     gateway:
       enabled:
         true
+
+endpoint.teste: 'Teste 123'
